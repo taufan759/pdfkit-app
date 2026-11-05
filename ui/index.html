@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDFKit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" id="home-btn" title="Kembali ke beranda">
+      <span class="logo">PDF</span><span class="brand-name">Kit</span>
+    </button>
+    <span class="tagline">Semua alat PDF, 100% offline di komputermu</span>
+    <button class="icon-btn" id="theme-btn" title="Ganti tema" aria-label="Ganti tema">◐</button>
+  </header>
+
+  <main>
+    <section id="home" class="view">
+      <h1>Alat PDF yang kamu butuhkan</h1>
+      <p class="sub">Gabung, pisah, kompres, putar, beri watermark, dan lainnya. File tidak pernah keluar dari komputermu.</p>
+      <div class="grid" id="tool-grid"></div>
+    </section>
+
+    <section id="tool" class="view hidden">
+      <div class="tool-head">
+        <button class="back" id="back-btn">← Semua alat</button>
+        <div>
+          <h2 id="tool-title"></h2>
+          <p class="sub" id="tool-desc"></p>
+        </div>
+      </div>
+
+      <div class="dropzone" id="dropzone">
+        <div class="dz-inner">
+          <div class="dz-icon">⬇</div>
+          <p><strong>Seret file ke sini</strong> atau</p>
+          <button class="btn primary" id="pick-btn">Pilih file</button>
+          <p class="hint" id="accept-hint"></p>
+        </div>
+      </div>
+
+      <ul class="files" id="file-list"></ul>
+
+      <form class="options" id="options" autocomplete="off"></form>
+
+      <div class="actions">
+        <button class="btn primary big" id="run-btn" disabled>Proses</button>
+      </div>
+
+      <div class="result hidden" id="result"></div>
+    </section>
+  </main>
+
+  <div class="busy hidden" id="busy"><div class="spinner"></div><p id="busy-text">Memproses…</p></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
